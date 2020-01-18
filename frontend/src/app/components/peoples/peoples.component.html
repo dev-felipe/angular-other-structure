@@ -1,0 +1,36 @@
+
+<div class="row d-flex justify-content-center">
+    <div class="col-12">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Sobrenome</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of registers; let i = index">
+              <tr>
+                <td>{{registers[i].nome}}</td>
+                <td>{{registers[i].sobrenome}}</td>
+                <td>{{registers[i].idade}}</td>
+                <td>
+                  <button class="btn btn-sm mr-2" type="button" (click)="deleteRegister(registers[i].id)">excluir</button>
+                  <button class="btn btn-sm mr-2" type="button" (click)="sendIdByUrl(registers[i].id)">editar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <figure class="highcharts-figure">
+            <div id="container"></div>
+            <p class="highcharts-description">
+                Word clouds are used to visualize how often each word in a
+                text occurs. This example uses an excerpt from the popular
+                "Lorem Ipsum" text. Words that appear often will appear
+                larger.
+            </p>
+        </figure>
+        
+    </div>
+</div>
